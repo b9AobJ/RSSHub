@@ -66,6 +66,10 @@ pageClass: routes
 | ---- | --------- | ------ |
 | hot  | recommend | recent |
 
+## DailyArt 每日艺术
+
+<Route author="zphw" example="/dailyart/zh" path="/dailyart/:language?" :paramsDesc="['语言，支持 en, zh, jp 等，默认为 en']" />
+
 ## Dilbert Comic Strip
 
 <Route name="Daily Strip" author="Maecenas" example="/dilbert/strip" path="/dilbert/strip">
@@ -332,6 +336,10 @@ R18 显示
 | ------ | ---------- | ---------- |
 | pic    | top        | top-4h     |
 
+### 首页
+
+<Route author="lonelykid" example="/jandan/article" path="/jandan/article"/>
+
 ## 绝对领域
 
 ### 图集文章
@@ -353,6 +361,8 @@ R18 显示
 | bbs      | bbs7     | bbs2     | bbs6     | bbs4     | bj       | bbs5     | bbs3     |
 
 ::: tip 提示
+
+留园网文档参见 [此处](https://docs.rsshub.app/new-media.html#liu-yuan-wang)
 
 禁忌书屋文档参见 [此处](https://docs.rsshub.app/reading.html#jin-ji-shu-wu)
 

@@ -392,6 +392,14 @@ xskb1 对应 <http://www.auto.uestc.edu.cn/index/xskb1.htm>
 
 </Route>
 
+### 研究生院
+
+<Route author="huyyi" example="/uestc/gr" path="/uestc/gr" />
+
+### 信息与通信工程学院
+
+<Route author="huyyi" example="/uestc/sice" path="/uestc/sice" />
+
 ## 东北大学
 
 ### 东北大学新闻网
@@ -637,6 +645,18 @@ category 列表：
 部分文章需要经过统一身份认证后才能阅读全文。
 :::
 
+## 哈尔滨工业大学（深圳）
+
+### 哈尔滨工业大学（深圳） - 新闻中心
+
+<Route author="yx1302317313" example="/hitsz/article/id-74" path="/hitsz/article/:category?" :paramsDesc="['分类名，默认为通知公告']" >
+
+| 校区要闻 | 媒体报道 | 通知公告 | 综合新闻 | 校园动态 | 讲座论坛 | 热点专题 |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| id-116   | id-80    | id-74    | id-75    | id-77    | id-78    | id-79    |
+
+</Route>
+
 ## 哈尔滨工业大学（威海）
 
 ### 今日工大 - 通知公告
@@ -845,6 +865,28 @@ jsjxy.hbut.edu.cn 证书链不全，自建 RSSHub 可设置环境变量 NODE_TLS
 
 <Route author="276562578" example="/jlu/oa" path="/jlu" />
 
+## 吉林工商学院
+
+### 主页
+
+<Route author="nczitzk" example="/jlbtc" path="/jlbtc/:category?" :paramDesc="['分类，见下表，默认为通知公告']">
+
+| 学院新闻 | 通知公告 | 媒体工商 | 博学讲堂 | 师生风采 |
+| -------- | -------- | -------- | -------- | -------- |
+| xyxw     | tzgg     | mtgs     | bxjt     | ssfc     |
+
+</Route>
+
+### 科研处
+
+<Route author="nczitzk" example="/jlbtc/kyc" path="/jlbtc/kyc/:category?" :paramDesc="['分类，见下表，默认为通知公告']">
+
+| 通知公告 | 新闻动态 |
+| -------- | -------- |
+| tzgg     | xwdt     |
+
+</Route>
+
 ## 暨南大学
 
 ## 暨南要闻
@@ -960,9 +1002,17 @@ jsjxy.hbut.edu.cn 证书链不全，自建 RSSHub 可设置环境变量 NODE_TLS
 
 ## 马萨诸塞大学 阿默斯特分校 (UMASS Amherst)
 
-### 电子与计算机工程系新闻
+### 电子与计算机工程系
+
+#### 新闻
 
 <Route author="gammapi" example="/umass/amherst/ecenews" path="/umass/amherst/ecenews" radar="1" rssbud="1"/>
+
+#### 研讨会
+
+<Route author="gammapi" example="/umass/amherst/eceseminar" path="/umass/amherst/eceseminar" radar="1" rssbud="1"/>
+
+注：[源站](https://ece.umass.edu/seminar)在未公布研讨会计划时会清空页面导致 Rsshub 抓取不到内容，此属正常现象。
 
 ### 信息与计算机科学系新闻
 
@@ -995,6 +1045,14 @@ jsjxy.hbut.edu.cn 证书链不全，自建 RSSHub 可设置环境变量 NODE_TLS
 ### 南方科技大学研究生网通知公告
 
 <Route author="sushengmao" example="/sustyjs" path="/sustyjs" />
+
+### 南方科技大学新闻网（中文）
+
+<Route author="sparkcyf" example="/sustech/newshub-zh" path="/sustech/newshub-zh" />
+
+### 南方科技大学采购与招标管理部
+
+<Route author="sparkcyf" example="/sustech/bidding" path="/sustech/bidding" />
 
 ## 南京工业大学
 
@@ -1624,6 +1682,19 @@ type 列表：
 
 </Route>
 
+## 武汉纺织大学
+
+### 信息门户公告
+
+<Route author="Loyio" example="/wtu/2" path="/wtu/:type"
+:paramsDesc="['公告类型, 详见表格']">
+
+| 公告类型 | 通知公告 | 教务信息 | 科研动态 |
+| -------- | -------- | -------- | -------- |
+| 参数     | 1        | 2        | 3        |
+
+</Route>
+
 ## 西安电子科技大学
 
 ### 教务处
@@ -1722,6 +1793,20 @@ type 列表：
 | 新闻动态 | 学术动态 | 通知公告 | 教研动态 |
 | -------- | -------- | -------- | -------- |
 | 1        | 2        | 3        | 4        |
+
+</Route>
+
+## 信阳师范学院
+
+### 高等教育自学考试办公室
+
+<Route author="VxRain" example="/xynu/zkb/zkzx" path="/xynu/zkb/:category" :paramsDesc="['分类ID']">
+
+分类 ID（如果请求的分类 ID 在不存在下表中，默认请求`zkzx`）
+
+| 主考专业 | 规章制度 | 实践课程 | 毕业论文 | 学士学位 | 自考毕业 | 自考教材 | 自考指南 | 联系我们 | 自考资讯 | 报名指南 | 日程安排 | 新生入门 | 转考免考 | 复习资料 |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| zkzy     | gzzd     | sjkc     | bylw     | xsxw     | zkby     | zkjc     | zkzn     | lxwm     | zkzx     | bmzn     | rcap     | xsrm     | zkmk     | fxzl     |
 
 </Route>
 
@@ -2169,6 +2254,28 @@ type 列表：
 | 本馆公告 |
 | -------- |
 | news     |
+
+</Route>
+
+## 重庆理工大学
+
+### 学校通知
+
+<Route author="Colin-XKL" example="/cqut/news" path="/cqut/news" radar="1"/>
+
+### 图书馆通知
+
+<Route author="Colin-XKL" example="/cqut/libnews" path="/cqut/libnews" radar="1"/>
+
+## 重庆文理学院
+
+### 通知公告
+
+<Route author="Fatpandac" example="/cqwu/news/academiceve" path="/cqwu/news/:type?" :paramsDesc="['可选，默认为 academiceve ']" radar="1">
+
+| 通知公告 | 学术活动公告 |
+| -------- | ------------ |
+| notify   | academiceve  |
 
 </Route>
 

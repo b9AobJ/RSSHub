@@ -20,6 +20,12 @@ pageClass: routes
 
 <Route author="nczitzk" example="/anki/changes" path="/anki/changes"/>
 
+## AnyTXT
+
+### Release Notes
+
+<Route author="nczitzk" example="/anytxt/release-notes" path="/anytxt/release-notes"/>
+
 ## Apkpure
 
 ### Versions
@@ -68,27 +74,9 @@ pageClass: routes
 
 语言
 
-| English | en |
-| 中文 (简体) | cn |
-| 中文 (繁體) | tw |
-| 日本語 | jp |
-| Русский | ru |
-| Español | es |
-| Français | fr |
-| Deutsch | de |
-| Italiano | it |
-| Slovenčina | sk |
-| Українська | uk |
-| Беларуская | be |
-| Dansk | da |
-| Polski | pl |
-| Português Brasileiro | br |
-| Čeština | cs |
-| Nederlands | nl |
-| Slovenščina| sl |
-| Türkçe| tr  |
-| ภาษาไทย | th |
-| 한국어 | kr |
+| English | 中文 (简体) | 中文 (繁體) | 日本語 | Русский | Español | Français | Deutsch | Italiano | Slovenčina | Українська | Беларуская | Dansk | Polski | Português Brasileiro | Čeština | Nederlands | Slovenščina | Türkçe | ภาษาไทย | 한국어 |
+| ------- | ----------- | ----------- | ------ | ------- | ------- | -------- | ------- | -------- | ---------- | ---------- | ---------- | ----- | ------ | -------------------- | ------- | ---------- | ----------- | ------ | ------- | ------ |
+| en      | cn          | tw          | jp     | ru      | es      | fr       | de      | it       | sk         | uk         | be         | da    | pl     | br                   | cs      | nl         | sl          | tr     | th      | kr     |
 
 </Route>
 
@@ -152,6 +140,12 @@ pageClass: routes
 
 </Route>
 
+## Ditto clipboard manager
+
+### Changes
+
+<Route author="nczitzk" example="/ditto/changes" path="/ditto/changes/:type?" :paramsDesc="['类型，可选 `beta`']"/>
+
 ## Docker Hub
 
 ### 镜像有新 Build
@@ -210,6 +204,12 @@ pageClass: routes
 
 <Route author="Jeason0228" example="/ipsw/index/ipsws/iPhone11,8" path="/ipsw/index/:ptype/:pname/" :paramsDesc="['填写ipsws或otas,得到不同版本的固件','产品名, `http://rsshub.app/ipsw/index/ipsws/iPod`如填写iPad则关注iPad整个系列(ptype选填为ipsws).`http://rsshub.app/ipsw/index/ipsws/iPhone11,8`如果填写具体的iPhone11,8则关注这个机型的ipsws固件信息']"/>
 
+## MacKed
+
+### 应用更新
+
+<Route author="HXHL" example="/macked/app/cleanmymac-x" path="/macked/app/:name" :paramsDesc="['应用名, 可在应用页 URL 中找到']"/>
+
 ## ManicTime
 
 <Route author="nczitzk" example="/manictime/releases" path="/manictime/releases"/>
@@ -223,6 +223,12 @@ pageClass: routes
 ### 外接程序更新
 
 <Route author="hoilc" example="/edge/addon/gangkeiaobmjcjokiofpkfpcobpbmnln" path="/edge/addon/:crxid" :paramsDesc="['扩展 id, 可在扩展页 URL 中找到']" />
+
+## Microsoft Store
+
+### Updates
+
+<Route author="hellodword" example="/microsoft-store/updates/9WZDNCRFHVN5/CN" path="/microsoft-store/updates/:productid/:market?" :paramsDesc="['在 Store 中点击 `分享` - `复制链接` 即可获得', '默认为 `CN`']" />
 
 ## Minecraft
 
@@ -322,6 +328,16 @@ pageClass: routes
 
 <Route author="nczitzk" example="/sesame/release_notes" path="/sesame/release_notes"/>
 
+## simpread
+
+### 消息通知
+
+<Route author="zytomorrow" example="/simpread/notice" path="/simpread/notice"/>
+
+### 更新日志
+
+<Route author="zytomorrow" example="/simpread/changelog" path="/simpread/changelog"/>
+
 ## sketch.com
 
 ### beta 更新
@@ -408,12 +424,6 @@ pageClass: routes
 
 <Route author="mrbruce516" example="/tesla" path="/tesla/update"/>
 
-## 腾讯柠檬 Lab
-
-### 柠檬精选 Mac Apps
-
-<Route author="HenryQW" example="/tencent/lemon" path="/tencent/lemon"/>
-
 ## 腾讯云移动直播 SDK
 
 ### 更新日志
@@ -425,3 +435,23 @@ pageClass: routes
 ### 金米奖
 
 <Route author="nczitzk" example="/mi/golden" path="/mi/golden"/>
+
+## 猿料
+
+### 标签
+
+<Route author="nczitzk" example="/yuanliao" path="/yuanliao/:tag/:sort?" :paramsDesc="['标签，见下表，默认为 `utools`', '排序，见下表，默认为最新回复']">
+
+标签
+
+| uTools | 插件发布 |
+| ------ | -------- |
+| utools | plugins  |
+
+排序
+
+| 最新回复 | 热门回复      | 新鲜出炉   | 陈年旧贴  |
+| -------- | ------------- | ---------- | --------- |
+|          | -commentCount | -createdAt | createdAt |
+
+</Route>
